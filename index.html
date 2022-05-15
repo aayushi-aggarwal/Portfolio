@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <!-- Meta tag -->
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		
+		<!-- Title Tag -->
+        <title>Portfolio </title>
+	
+		<link rel="icon" type="image/png" href="images/favicon.png">	
+		
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet"> 
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+		
+        <link rel="stylesheet" href="css/slicknav.min.css">
+		
+        <!-- <link rel="stylesheet" href="css/animate-text.css"> -->
+		
+		<link rel="stylesheet" href="css/owl.theme.default.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+		
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+		
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/reset.css">	
+        <link rel="stylesheet" href="css/responsive.css">	
+		
+		<link rel="stylesheet" href="css/color/color1.css">
+	 
+		
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+		<div class="loader">
+			<div class="loader-inner">
+				<div class="k-line k-line11-1"></div>
+				<div class="k-line k-line11-2"></div>
+				<div class="k-line k-line11-3"></div>
+				<div class="k-line k-line11-4"></div>
+				<div class="k-line k-line11-5"></div>
+			</div>
+		</div>
+		<!-- End Preloader -->
+
+		<!-- modal popup -->
+		<div class="modal fade" id="admodal" role="dialog" tabindex="-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="carousel slide" data-ride="carousel" id="adCarousel">
+							<div class="carousel-inner">
+								<div class="item active">
+									<h1>Registartion Form</h1>
+									<h4>Please fill the Name</h4>
+								Name:<input type="text">
+								</div>
+								<div class="item">
+									<h1>Registartion Form</h1>
+									<h4>Please fill the Email</h4>
+								Email:<input type="text">
+								</div>
+								<div class="item">
+									<h1>Registartion Form</h1>
+									<h4>Please fill the Phone Number</h4>
+								Phone Number:<input type="text">
+								</div>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" data-dismiss="modal" type="button">No</button><br class="visible-xs">
+						<br class="visible-xs">
+						<button class="btn btn-success" type="button">Yes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end modal popup -->
+
+	<!-- modal js -->
+		<script>
+	  if (!sessionStorage.adModal) {
+			setTimeout(function() {
+				$('#admodal').find('.item').first().addClass('active');
+				$('#admodal').modal({
+					backdrop: 'static',
+					keyboard: false
+				});
+			}, 5000);
+			$('#adCarousel').carousel({
+			  interval: 4000,
+			  cycle: true
+			});
+			
+			$("#buttonSuccess").click(function(e){
+				e.preventDefault();
+				var url = $(this).attr("href");
+				var win = window.open(url, '_blank');
+				$('#admodal').modal('hide');
+			})
+			sessionStorage.adModal = 1;}
+		</script>
+
+		<!-- Start Header -->
+		<header id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col-sm-12 col-xs-12">
+						<div class="logo">
+							<a href="index.html">Portfolio</a>
+						</div>
+						<div class="mobile-nav"></div>
+					</div>
+					<div class="col-md-10 col-sm-12 col-xs-12">
+						<div class="nav-area">
+							<nav class="mainmenu">
+								<div class="collapse navbar-collapse">
+									<ul class="nav navbar-nav menu">
+										<li class="active"><a href="#personal-area"><i class="fa fa-home"></i>Homepage</a></li>
+										<li><a href="#my-service">My Skills</a></li>
+										<li><a href="#portfolio">Portfolio</a></li>
+										<li><a href="#call-action">Blog</a></li>				
+										<li><a href="#contact">Contact</a></li>	
+											
+									</ul>
+									<ul class="social-icon">
+										<li><a href="#header"><i class="fa fa-plus"></i></a></li>
+									</ul>
+									<ul class="social">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-behance"></i></a></li>
+										<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+									</ul>
+
+								</div>
+							</nav>
+							</div>
+							</div>
+							</div>
+							</div>
+				
+		</header>
+		
+		<!--/ End Header -->
+		
+		<!-- Start Personal Area -->
+		<section id="personal-area">
+			<div class="personal-main">
+				<div class="personal-single">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 pt-6 pt-lg-0">
+								<div class="personal-text">
+									<div class="my-info">
+										<h1>My Name Is Aayushi</h1>
+										<div class="animated-text">
+											<h3>Web Designer</h3>
+											<h3>Web Developer</h3>
+											<h3>Software Engineer</h3>
+										</div>
+										<div class="button">
+											<a href="#contact" class="btn primary shine"><i class="fa fa-rocket"></i>Hire Me</a>
+											<a href="#portfolio" class="btn shine"><i class="fa fa-briefcase"></i>My Project</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Personal Area -->
+		
+		<!-- Start About Me -->
+		<section id="about-me" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 fix">
+						<div class="tabs-main">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><span class="tooltips">About Me</span><a href="#welcome" role="tab" data-toggle="tab"><i class="fa fa-user"></i></a></li>
+								<li role="presentation"><span class="tooltips">My Skill</span><a href="#skill" role="tab"  data-toggle="tab"><i class="fa fa-rocket"></i></a></li>
+								<li role="presentation"><span class="tooltips">why Me</span><a href="#why" role="tab"  data-toggle="tab"><i class="fa fa-question"></i></a></li>
+								<li role="presentation"><span class="tooltips">My Vision</span><a href="#vision" role="tab"  data-toggle="tab"><i class="fa fa-graduation-cap"></i></a></li>
+							</ul>
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane fade in active" id="welcome">
+									<div class="about-text">
+										<h2 class="tab-title">About Me</h2>
+										<div class="row">
+											<div class="col-md-4 col-sm-4 col-xs-12">
+												<div class="single-image">
+													<img src="images/img.jpeg" alt="">
+												</div>
+											</div>
+											<div class="col-md-8 col-sm-12 col-xs-12">
+												<div class="content">
+												<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi corrupti doloremque accusamus fugit aliquid, sequi dolorem dolorum possimus debitis incidunt veniam minus veritatis non iusto quaerat voluptas. Ipsum, magni quis odit voluptate ullam at aut maxime vel quibusdam sapiente expedita sed alias delectus pariatur labore facere eius porro quia voluptatem fugiat harum? Ipsa omnis perspiciatis voluptates fugit, ipsam quae vero magni, cum temporibus quo cupiditate porro maiores explicabo vitae molestiae ad sint veritatis! Quasi nulla, maxime beatae facere doloremque assumenda quis libero tempora harum expedita reprehenderit minima aut laudantium explicabo deleniti in quae, itaque praesentium vero debitis autem! Debitis, amet!</p>
+												</div>
+												<div class="social">
+													<ul>
+														<li><a href="#"><i class="fa fa-facebook"></i></a><li>
+														<li><a href="#"><i class="fa fa-twitter"></i></a><li>
+														<li><a href="#"><i class="fa fa-google-plus"></i></a><li>
+														<li><a href="#"><i class="fa fa-linkedin"></i></a><li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div role="tabpanel" class="tab-pane fade" id="skill">
+									<h2 class="tab-title">My Skill</h2>
+									<div class="row">				
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>Web Design</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;"><span>55%</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>Web Development</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100" style="width: 79%;"><span>79%</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>HTML5/CSS3</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span>80%</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>UI/UX Design</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"><span>95%</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>Javascript</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"><span>70%</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>DSA</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"><span>55%</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>Web Design</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;"><span>55%</span></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6 col-xs-12">
+											<div class="single-skill">
+												<div class="skill-info">
+													<h4>Web Development</h4>
+												</div>
+												<div class="progress">
+												  <div class="progress-bar" role="progressbar" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100" style="width: 79%;"><span>79%</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="why">
+									<div class="about-text">
+										<h2 class="tab-title">Why Me?</h2>
+										<div class="content">
+											<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi corrupti doloremque accusamus fugit aliquid, sequi dolorem dolorum possimus debitis incidunt veniam minus veritatis non iusto quaerat voluptas. Ipsum, magni quis odit voluptate ullam at aut maxime vel quibusdam sapiente expedita sed alias delectus pariatur labore facere eius porro quia voluptatem fugiat harum? Ipsa omnis perspiciatis voluptates fugit, ipsam quae vero magni, cum temporibus quo cupiditate porro maiores explicabo vitae molestiae ad sint veritatis! Quasi nulla, maxime beatae facere doloremque assumenda quis libero tempora harum expedita reprehenderit minima aut laudantium explicabo deleniti in quae, itaque praesentium vero debitis autem! Debitis, amet!</p>
+											<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi corrupti doloremque accusamus fugit aliquid, sequi dolorem dolorum possimus debitis incidunt veniam minus veritatis non iusto quaerat voluptas. Ipsum, magni quis odit voluptate ullam at aut maxime vel quibusdam sapiente expedita sed alias delectus pariatur labore facere eius porro quia voluptatem fugiat harum? Ipsa omnis perspiciatis voluptates fugit, ipsam quae vero magni, cum temporibus quo cupiditate porro maiores explicabo vitae molestiae ad sint veritatis! Quasi nulla, maxime beatae facere doloremque assumenda quis libero tempora harum expedita reprehenderit minima aut laudantium explicabo deleniti in quae, itaque praesentium vero debitis autem! Debitis, amet!</p>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="vision">
+									<div class="about-text">
+										<h2 class="tab-title">My Vision</h2>
+										<div class="content">
+											<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi corrupti doloremque accusamus fugit aliquid, sequi dolorem dolorum possimus debitis incidunt veniam minus veritatis non iusto quaerat voluptas. Ipsum, magni quis odit voluptate ullam at aut maxime vel quibusdam sapiente expedita sed alias delectus pariatur labore facere eius porro quia voluptatem fugiat harum? Ipsa omnis perspiciatis voluptates fugit, ipsam quae vero magni, cum temporibus quo cupiditate porro maiores explicabo vitae molestiae ad sint veritatis! Quasi nulla, maxime beatae facere doloremque assumenda quis libero tempora harum expedita reprehenderit minima aut laudantium explicabo deleniti in quae, itaque praesentium vero debitis autem! Debitis, amet!</p>
+											<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi corrupti doloremque accusamus fugit aliquid, sequi dolorem dolorum possimus debitis incidunt veniam minus veritatis non iusto quaerat voluptas. Ipsum, magni quis odit voluptate ullam at aut maxime vel quibusdam sapiente expedita sed alias delectus pariatur labore facere eius porro quia voluptatem fugiat harum? Ipsa omnis perspiciatis voluptates fugit, ipsam quae vero magni, cum temporibus quo cupiditate porro maiores explicabo vitae molestiae ad sint veritatis! Quasi nulla, maxime beatae facere doloremque assumenda quis libero tempora harum expedita reprehenderit minima aut laudantium explicabo deleniti in quae, itaque praesentium vero debitis autem! Debitis, amet!</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
+		<!--/ End About Me -->	
+		
+		<!-- Start Service -->
+		<section id="my-service" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-title">
+							<h1><span>Proficient</span> At<i class="fa fa-rocket"></i></h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita ipsam ratione dolorum nesciunt in libero nulla quibusdam praesentium officiis optio ex fuga aperiam officia ipsum, aspernatur asperiores et illum.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.4s">
+						<div class="single-service active">
+							<i class="fa fa-html5"></i>
+							<h2>Web Design</h2>
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.6s">
+						<div class="single-service">
+							<i class="fa fa-code"></i>
+							<h2>Web Development</h2>
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.8s">
+						<div class="single-service">
+							<i class="fa fa-mobile"></i>
+							<h2>Responsive Design</h2>
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
+						<div class="single-service">
+							<i class="fa fa-pencil-square-o"></i>
+							<h2>Customize Website</h2>
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Service -->
+		
+		<!-- Start portfolio -->
+		<section id="portfolio" class="section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-title">
+							<h1><span>My</span> Portfolio<i class="fa fa-briefcase"></i></h1>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio aut impedit id, laborum facilis cum quisquam obcaecati reiciendis quas nostrum eius asperiores nisi dicta voluptatum modi maxime earum officiis consequuntur.</p>
+						</div>
+					</div>
+				</div>
+						
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="portfolio-nav">
+							<ul>
+								<li class="active" data-filter="*"><span>06</span><i class="fa fa-tasks"></i>All Works</li>
+								<li data-filter=".development"><span>03</span><i class="fa fa-pencil"></i>Web Development</li>
+								<li data-filter=".design"><span>02</span><i class="fa fa-paint-brush"></i>Web Design</li>
+								<li data-filter=".html5"><span>03</span><i class="fa fa-html5"></i>HTML5</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+						
+				<div class="portfolio-inner">
+					<div class="row stylex">	
+						<div class="isotop-active">
+							<div class="mix development html5 col-md-4 col-sm-6 col-xs-12 col-fix ">
+								<div class="portfolio-single">
+									<div class="portfolio-head">
+										<img src="images/pr1.png" alt=""/>
+									</div>
+									<div class="portfolio-hover">
+										<h4><span>Web Design</span><a href="#">Project Name Here</a></h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum tincidunt vulputate. </p>
+										<div class="button">
+											<a data-fancybox="gallery" href="images/pr1.png"><i class="fa fa-search"></i></a>
+											<a href="portfolio-single.html" class="primary"><i class="fa fa-link"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mix design development col-md-4 col-sm-6 col-xs-12 col-fix">
+								<div class="portfolio-single">
+									<div class="portfolio-head">
+										<img src="images/pr2.png" alt=""/>
+									</div>
+									<div class="portfolio-hover">
+										<h4><span>Html Website</span><a href="#">Project Name Here</a></h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum tincidunt vulputate. </p>
+										<div class="button">
+											<a data-fancybox="gallery" href="images/pr2.png"><i class="fa fa-search"></i></a>
+											<a href="portfolio-single.html" class="primary"><i class="fa fa-link"></i></a>
+										</div> 
+									</div>
+								</div>
+							</div>
+							<div class="mix wordpress html5 col-md-4 col-sm-6 col-xs-12 col-fix">
+								<div class="portfolio-single">
+									<div class="portfolio-head">
+										<img src="images/pr3.png" alt=""/>
+									</div>
+									<div class="portfolio-hover">
+										<h4><span>HTML5</span><a href="#">Project Name Here</a></h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum tincidunt vulputate. </p>
+										<div class="button">
+											<a data-fancybox="gallery" href="images/pr3.png"><i class="fa fa-search"></i></a>
+											<a href="portfolio-single.html" class="primary"><i class="fa fa-link"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mix wordpress col-md-4 col-sm-6 col-xs-12 col-fix">
+								<div class="portfolio-single">
+									<div class="portfolio-head">
+										<img src="images/pr4.png" alt=""/>
+									</div>
+									<div class="portfolio-hover">
+										<h4><span>Web Design</span><a href="#">Project Name Here</a></h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum tincidunt vulputate. </p>
+										<div class="button">
+											<a data-fancybox="gallery" href="images/pr4.png"><i class="fa fa-search"></i></a>
+											<a href="portfolio-single.html" class="primary"><i class="fa fa-link"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mix design html5 col-md-4 col-sm-6 col-xs-12 col-fix">
+								<div class="portfolio-single">
+									<div class="portfolio-head">
+										<img src="images/pr5.png" alt=""/>
+									</div>
+									<div class="portfolio-hover">
+										<h4><span>HTML5</span><a href="#">Project Name Here</a></h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum tincidunt vulputate. </p>
+										<div class="button">
+											<a data-fancybox="gallery" href="images/pr5.png"><i class="fa fa-search"></i></a>
+											<a href="portfolio-single.html" class="primary"><i class="fa fa-link"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mix development col-md-4 col-sm-6 col-xs-12 col-fix">
+								<div class="portfolio-single">
+									<div class="portfolio-head">
+										<img src="images/pr6.png" alt=""/>
+									</div>
+									<div class="portfolio-hover">
+										<h4><span>Web Design</span><a href="#">Project Name</a></h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum tincidunt vulputate. </p>
+										<div class="button">
+											<a data-fancybox="gallery" href="images/pr6.png"><i class="fa fa-search"></i></a>
+											<a href="portfolio-single.html" class="primary"><i class="fa fa-link"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="button">
+						<a href="par.html" class="btn">More Portfolio<i class="fa fa-angle-double-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End portfolio -->
+		
+ 
+		<!-- Start Call To Action -->
+		<section id="call-action" class="section wow fadeInUp">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="call-action-main">
+							<h2>I'm Ready for your next project</h2>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi corrupti doloremque accusamus fugit aliquid, sequi dolorem dolorum possimus debitis incidunt veniam minus veritatis non iusto quaerat voluptas. Ipsum, magni quis odit voluptate ullam at aut maxime vel quibusdam sapiente expedita sed alias delectus pariatur labore facere eius porro quia voluptatem fugiat harum? Ipsa omnis perspiciatis voluptates fugit, ipsam quae vero magni, cum temporibus quo cupiditate porro maiores explicabo vitae molestiae ad sint veritatis! Quasi nulla, maxime beatae facere doloremque assumenda quis libero tempora harum expedita reprehenderit minima aut laudantium explicabo deleniti in quae, itaque praesentium vero debitis autem! Debitis, amet!</p>
+												<div class="button">
+								<a href="#" class="btn"><i class="fa fa-address-book"></i>Hire ME Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Call To Action -->
+		
+		<!-- Start Contact -->
+		<section id="contact" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="section-title">
+							<h1><span>Contact</span> Me<i class="fa fa-star"></i></h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quos. Libero at iusto eos magnam aut aliquam magni, tempora sint reprehenderit eius. Alias numquam ducimus laboriosam cupiditate repellendus deserunt quidem</p></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.4s">
+						<form class="form" method="post" action="mail/mail.php">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" for="name" placeholder="Full Name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input  name="email" placeholder="Your Email" >
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea name="message" rows="6" placeholder="Type Your Message Here" ></textarea>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group button">	
+										<button  class="button primary"><i class="fa fa-send"></i>Submit</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					
+					<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="0.8s">
+						<div class="contact">
+							<div class="single-address">
+								<i class="fa fa-phone"></i> 
+								<div class="title">
+									<h4>My Phone</h4>
+									<p>+1-202-555-0100,<br>+441632960431</p>
+								</div>
+							</div>
+							<div class="single-address">
+								<i class="fa fa-envelope"></i> 
+								<div class="title">
+									<h4>Email Address</h4>
+									<p>contact@gmail.com,<br>info@gmail.com</p>
+								</div>
+							</div>
+							<div class="single-address">
+								<i class="fa fa-map"></i> 
+								<div class="title">
+									<h4>My Location</h4>
+									<p>24/8 xyz <br>Kolkata, WB-07</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Contact -->
+		
+		<!-- Start Clients -->
+		<div id="clients" class="section" data-stellar-background-ratio="0.3">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="clients-slider">
+							<div class="single-clients">
+								<a href="#" target="_blank"><img src="images/clients-1.png" alt="#"></a>
+							</div>
+							<div class="single-clients active">
+								<a href="#" target="_blank"><img src="images/clients-2.png" alt="#"></a>
+							</div>
+							<div class="single-clients">
+								<a href="#" target="_blank"><img src="images/clients-3.png" alt="#"></a>
+							</div>
+							<div class="single-clients">
+								<a href="#" target="_blank"><img src="images/clients-4.png" alt="#"></a>
+							</div>
+							<div class="single-clients">
+								<a href="#" target="_blank"><img src="images/clients-5.png" alt="#"></a>
+							</div>
+							<div class="single-clients">
+								<a href="#" target="_blank"><img src="images/clients-6.png" alt="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Clients -->
+		
+		<!-- Footer Top -->
+		<section id="footer-top" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="newslatter">
+							<h2><span>Signup</span>Newsletter</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eaque officia iste itaque. Hic pariatur velit cupiditate, asperiores ullam cumque doloremque animi consequuntur! Explicabo quia animi iste odio molestias maiores.</p>
+						</div>
+						<form class="news-form">
+							<input type="email" placeholder="type your email">
+							<button type="submit" class="button primary"><i class="fa fa-paper-plane"></i></button>
+						</form>	
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End footer Top -->
+	
+		<!-- Start Footer -->
+		<footer id="footer">
+			<div class="arrow">
+				<a href="#personal-area" class="btn"><i class="fa fa-angle-up"></i></a>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12"></div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<ul class="social">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li class="active"><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End footer -->
+		 <script type="text/javascript" src="js/jquery.min.js"></script>
+		
+		 
+		<script type="text/javascript" src="js/modernizr.min.js"></script>
+			
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		
+		<script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+		
+		<script type="text/javascript" src="js/animate-text.js"></script>
+		
+		<script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+		
+		
+    	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+		
+		
+    	<script type="text/javascript" src="js/easing.js"></script>
+		
+		
+    	<script type="text/javascript" src="js/jquery.nav.js"></script>
+		
+	
+		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+	
+		<script type="text/javascript" src="js/ytplayer.min.js"></script>
+
+	
+		<script type="text/javascript" src="js/particles.min.js"></script>
+		
+	
+		<script type="text/javascript" src="js/waypoints.min.js"></script>
+		<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+		
+		
+		<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+		
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/mainone.js"></script>
+		 
+		 <script type="text/javascript" src="js/main.js"></script> 
+	</body>
+</html>
